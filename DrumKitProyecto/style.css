@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(238, 238, 238);
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url("./imagenes/concierto.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  /* esto es el primer section */
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font-size: 3rem;
+    color: white;
+  }
+  #container {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 30%;
+    height: 40%;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  button {
+  background-color: transparent;
+  border: 2px solid #f8fc8d;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-shadow: 0 0 10px #f8fc8d,
+               0 0 20px #f8fc8d,
+               0 0 30px #f8fc8d,
+               0 0 40px #f8fc8d,
+               0 0 70px #f8fc8d,
+               0 0 80px #f8fc8d,
+               0 0 100px #f8fc8d,
+               0 0 150px #f8fc8d;    
+  justify-content: space-around;
+  align-items: center;
+  }
+  button:hover {
+    box-shadow: inset 400px 50px 0 0 #f59a62;
+  }
+  
