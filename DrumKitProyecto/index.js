@@ -76,3 +76,64 @@ document.addEventListener("keydown", (event) => {
     hihatClose.play();
   }
 });
+
+// pruebas
+
+// Array para almacenar la secuencia de sonidos grabados
+let secuenciaGrabada = [];
+
+// Variable para indicar si la grabación está activa
+let grabacionActiva = false;
+
+// Función para manejar el clic en el botón de grabación
+function toggleGrabacion() {
+  grabacionActiva = !grabacionActiva; // Invertir el estado de la grabación
+  if (grabacionActiva) {
+    secuenciaGrabada = []; // Reiniciar la secuencia de sonidos grabados al comenzar la grabación
+  }
+}
+
+// Función para manejar el clic en el botón de reproducción
+// Función para reproducir los sonidos grabados en el orden en que fueron presionados
+function reproducirSonidosGrabados() {
+  secuenciaGrabada.forEach((sonido, index) => {
+    setTimeout(() => {
+      sonido.play();
+    }, index * 250); // Reproducir cada sonido con un retraso de 1 segundo (ajusta según sea necesario)
+  });
+}
+
+// Asignar manejo de clic a los botones de grabación y reproducción
+const botonGrabar = document.getElementById("botonGrabar");
+botonGrabar.addEventListener("click", toggleGrabacion);
+
+const botonReproducir = document.getElementById("botonReproducir");
+botonReproducir.addEventListener("click", reproducirSonidosGrabados);
+
+// Manejar eventos de teclado para la grabación
+document.addEventListener("keydown", (event) => {
+  if (grabacionActiva) {
+    switch (event.key.toUpperCase()) {
+      case "Q":
+        secuenciaGrabada.push(crash);
+        break;
+      case "W":
+        secuenciaGrabada.push(tomLow);
+        break;
+      case "E":
+        secuenciaGrabada.push(snare);
+        break;
+      case "R":
+        secuenciaGrabada.push(kick);
+        break;
+      case "T":
+        secuenciaGrabada.push(tomMid);
+        break;
+      case "Y":
+        secuenciaGrabada.push(hihatClose);
+        break;
+      default:
+        break;
+    }
+  }
+});

@@ -41,11 +41,14 @@ div {
   flex-wrap: wrap;
 }
 button {
+  margin: 1rem;
+  width: 10rem;
+  height: 6rem;
   background-color: transparent;
   border: 2px solid #f8fc8d;
   color: #fff;
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: bold;
   border-radius: 30px;
   text-shadow: 0 0 10px #f8fc8d, 0 0 20px #f8fc8d, 0 0 30px #f8fc8d,
