@@ -9,57 +9,70 @@ const hihatOpen = new Audio("./sonidos/hihat-open.wav");
 
 // primer crash
 
-const todosLosCrash = document.getElementsByClassName("crashimg");
-for (const i of todosLosCrash) {
-  i.onclick = () => {
-    crash.play();
-  };
-}
+const losCrash = document.querySelector(".crashimg");
+losCrash.onclick = () => {
+  crash.play();
+};
 
 document.addEventListener("keydown", (event) => {
-  if (
-    event.key === "q" ||
-    event.key === "Q" ||
-    event.key === "o" ||
-    event.key === "O"
-  ) {
+  if (event.key === "q" || event.key === "Q") {
     crash.play();
   }
 });
-
-// hihat close
-const todosLosHihat = document.getElementsByClassName("hihatimg");
-
-for (const element of todosLosHihat) {
-  element.onclick = () => {
-    hihatClose.play();
-  };
-}
-document.addEventListener("keydown", (event) => {
-  if (
-    event.key === "w" ||
-    event.key === "W" ||
-    event.key === "i" ||
-    event.key === "I"
-  ) {
-    hihatClose.play();
-  }
-});
-
-// tomlow
-
-const tomLowTambor = document.querySelector(".tomlowimg");
-tomLowTambor.onclick = function () {
+//  Tomlow
+const elTomlow = document.querySelector(".TomLowimg");
+elTomlow.onclick = () => {
   tomLow.play();
 };
-document.addEventListener("keydown", (element) => {
-  if (element.key === "e" || element.key === "E") {
+document.addEventListener("keydown", (event) => {
+  if (event.key === "w" || event.key === "W") {
     tomLow.play();
   }
 });
 
-// snare and kick
-const snareKickTambor = document.querySelector(".snarekick");
-snareKickTambor.onclick = function () {
+// tomHigh
+
+const eltomHigh = document.querySelector(".tomHighimg");
+eltomHigh.onclick = () => {
   snare.play();
 };
+document.addEventListener("keydown", (event) => {
+  if (event.key === "e" || event.key === "E") {
+    snare.play();
+  }
+});
+
+// kick
+const elKick = document.querySelector(".kickimg");
+elKick.onclick = () => {
+  kick.play();
+};
+document.addEventListener("keydown", (event) => {
+  if (event.key === "r" || event.key === "R") {
+    kick.play();
+  }
+});
+
+// tommid
+
+const eltommid = document.querySelector(".tommidimg");
+eltommid.onclick = () => {
+  tomMid.play();
+};
+document.addEventListener("keydown", (event) => {
+  if (event.key === "t" || event.key === "T") {
+    tomMid.play();
+  }
+});
+
+// hihat
+
+const elhihat = document.querySelector(".hiHatimg");
+elhihat.onclick = () => {
+  hihatClose.play();
+};
+document.addEventListener("keydown", (event) => {
+  if (event.key === "y" || event.key === "Y") {
+    hihatClose.play();
+  }
+});
