@@ -17,7 +17,7 @@
 
             <img src="./img/bateria.png" alt="bateria">
             <div>
-                <button class="crashimg boton">
+                <button class="crashimg drum-button" data-sound="crash">
                     <span>
                         Q
                     </span>
@@ -25,7 +25,7 @@
                         Crash
                     </p>
                 </button>
-                <button class="TomLowimg boton">
+                <button class="TomLowimg drum-button" data-sound="tomLow">
                     <span>
                         W
                     </span>
@@ -35,7 +35,7 @@
 
                     </p>
                 </button>
-                <button class="tomHighimg boton">
+                <button class="tomHighimg drum-button" data-sound="snare">
 
                     <span>
                         E
@@ -46,8 +46,8 @@
                     </p>
 
 
-                </button>
-                <button class="kickimg boton">
+                </button>"
+                <button class="kickimg drum-button" data-sound="kick">
                     <span>
                         R
                     </span>
@@ -56,7 +56,7 @@
                         Kick
                     </p>
                 </button>
-                <button class="tommidimg boton">
+                <button class="tommidimg  drum-button" data-sound="tomMid">
                     <span>
                         T
                     </span>
@@ -65,7 +65,7 @@
                         TomMid
                     </p>
                 </button>
-                <button class="hiHatimg">
+                <button class="hiHatimg drum-button" data-sound="hihatClose">
                     <span>
                         Y
                     </span>
@@ -75,10 +75,17 @@
                     </p>
                 </button>
 
-                <button id="botonGrabar" class="grabar">Grabar</button>
-                <button id="botonReproducir" class="reproducir">reproducir</button>
+
 
             </div>
+            <div>
+                <button id="botonGrabar" class="grabar">Grabar</button>
+                <button id="botonReproducir" class="reproducir">reproducir</button>
+                <button id="botonDetener" class="grabar">detener</button>
+
+            </div>
+
+
 
         </section>
 
