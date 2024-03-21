@@ -26,7 +26,7 @@ function reproducirSecuencia() {
   secuenciaGrabada.forEach((sonido, index) => {
     setTimeout(() => {
       sonido.play();
-    }, index * 250); // Reproducir cada sonido con un retraso de 250 milisegundos
+    }, index * 500); // Reproducir cada sonido con un retraso de 500 milisegundos
   });
 }
 
